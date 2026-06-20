@@ -129,6 +129,7 @@ class TestAccountService(TestCase):
             response.headers["Referrer-Policy"],
             "strict-origin-when-cross-origin"
         )
+
     def test_cors_headers(self):
         """It should return CORS headers"""
         response = self.client.get(
@@ -271,4 +272,3 @@ class TestAccountService(TestCase):
             response.status_code,
             status.HTTP_404_NOT_FOUND
         )
-    
